@@ -34,11 +34,11 @@ public class Circle {
     }
 
     public Circle(int radius){
-        this(new Point2D(0,0),radius);
+        this(new Point2D(),radius);
     }
 
     public Circle(){
-        this(new Point2D(0,0),1);
+        this(new Point2D(),1);
     }
 
     public void moveRel(int dx, int dy){

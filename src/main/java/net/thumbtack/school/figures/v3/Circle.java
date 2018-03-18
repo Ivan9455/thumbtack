@@ -107,10 +107,6 @@ public class Circle extends Figure {
         return Objects.hash(super.hashCode(), center, radius);
     }
 
-//    @Override
-//    public void setColor(String colorString) throws ColorException {
-//
-//        this.setColor(Color.colorFromString(colorString));
-//    }
+
 }
 

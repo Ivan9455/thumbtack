@@ -23,6 +23,7 @@ public abstract class Figure implements Colored, HasArea {
 
     public abstract boolean isInside(Point2D point);
 
+
     @Override
     public void setColor(Color color) throws ColorException {
         checkColor(color);

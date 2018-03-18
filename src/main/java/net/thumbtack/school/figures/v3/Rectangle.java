@@ -4,12 +4,14 @@ package net.thumbtack.school.figures.v3;
 import net.thumbtack.school.colors.Color;
 import net.thumbtack.school.colors.ColorException;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Rectangle extends Figure {
-    //переменные
-    private Point2D topLeft, bottomRight;
+public class Rectangle extends Figure implements Serializable {
 
+    private static final long serialVersionUID = 803745049486954915L;
+
+    private Point2D topLeft, bottomRight;
 
     public int getLength() {
         return Math.abs(topLeft.getX() - bottomRight.getX());
@@ -18,7 +20,7 @@ public class Rectangle extends Figure {
     public int getWidth() {
         return Math.abs(topLeft.getY() - bottomRight.getY());
     }
-    //get and set
+
 
     public Point2D getTopLeft() {
         return topLeft;
@@ -35,7 +37,6 @@ public class Rectangle extends Figure {
     public void setBottomRight(Point2D bottomRight) {
         this.bottomRight = bottomRight;
     }
-    //методы///////////////////////////////////////////
 
     public Rectangle(Point2D leftTop, Point2D rightBottom, Color color) throws ColorException {
         setTopLeft(leftTop);
@@ -53,6 +54,13 @@ public class Rectangle extends Figure {
         setTopLeft(new Point2D(xLeft, yTop));
         setBottomRight(new Point2D(xRight, yBottom));
         setColor(color);
+    }
+
+    //tut
+    public Rectangle(int xLeft, int yTop, int xRight, int yBottom) {
+        super();
+        setTopLeft(new Point2D(xLeft, yTop));
+        setBottomRight(new Point2D(xRight, yBottom));
     }
 
     public Rectangle(int xLeft, int yTop, int xRight, int yBottom, String color) throws ColorException {
@@ -148,7 +156,13 @@ public class Rectangle extends Figure {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(super.hashCode(), topLeft, bottomRight);
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle [topLeft =" + topLeft + " , bottomRight= " + bottomRight + "]";
+    }
+
+
 }

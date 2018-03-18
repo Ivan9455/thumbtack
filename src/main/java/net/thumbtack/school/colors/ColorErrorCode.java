@@ -13,4 +13,5 @@ public enum ColorErrorCode {
     ColorErrorCode(String errorString) {
         this.errorString = errorString;
     }
+
 }

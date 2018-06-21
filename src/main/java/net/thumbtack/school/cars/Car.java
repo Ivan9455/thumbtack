@@ -57,7 +57,6 @@ public class Car implements Colored {
     }
 
     public Car(String model, int weight, int maxSpeed, Color color) throws ColorException {
-
         this.model = model;
         this.weight = weight;
         this.maxSpeed = maxSpeed;
